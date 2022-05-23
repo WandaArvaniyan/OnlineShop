@@ -8,7 +8,7 @@
                 <a href="#"><img class="img-thumbnail" src="<?php echo base_url() . 'assets/images/'.$row['gambar']; ?>"/></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#"><?php echo $row['nama_produk'];?></a>
+                    <a href=""><?php echo $row['nama_produk'];?></a>
                   </h4>
                   <h5>Rp. <?php echo number_format($row['harga'],0,",",".");?></h5>
                   <p class="card-text"><?php echo $row['deskripsi'];?></p>

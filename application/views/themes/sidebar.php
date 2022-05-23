@@ -35,36 +35,22 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="http://localhost/mif2020/OnlineShop/">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                             
-                            <div class="sb-sidenav-menu-heading">Produk</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"></div>
-                                Atasan
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"></div>
-                                Bawahan
-                            </a>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"></i></div>
-                                Outer
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"></div>
-                                Gamis
-                            </a>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"></div>
-                                Hijab
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"></div>
-                                Lain-lain
-                            </a>
+                            <div class="sb-sidenav-menu-heading">Kategori</div>
+                            <a class="nav-link" href="<?php echo base_url()?>shopping/index/" class="list-group-item?>">Semua</a>
+                            <?php 
+                                foreach ($kategori as $row)
+                                {
+                            ?>
+                                <a class="nav-link" href="<?php echo base_url()?>shopping/index/<?php echo $row['id'];?>" class="list-group-item"><?php echo $row['nama_kategori'];?></a>
+                                <?php
+                                }
+                            ?>
+                                
                         </div>
                         <div class="sb-sidenav-menu-heading">Tentang</div>
                             <a class="nav-link" href="<?php echo base_url()?>shopping/tampil_cart">
