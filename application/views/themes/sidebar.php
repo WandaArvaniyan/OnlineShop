@@ -40,12 +40,12 @@
                             </a>
                             
                             <div class="sb-sidenav-menu-heading">Kategori</div>
-                            <a class="nav-link" href="<?php echo base_url()?>shopping/index/" class="list-group-item?>">Semua</a>
+                            <a class="nav-link" href="<?php echo base_url()?>shopping/index/">Semua</a>
                             <?php 
                                 foreach ($kategori as $row)
                                 {
                             ?>
-                                <a class="nav-link" href="<?php echo base_url()?>shopping/index/<?php echo $row['id'];?>" class="list-group-item"><?php echo $row['nama_kategori'];?></a>
+                                <a class="nav-link" href="<?php echo base_url()?>shopping/index/<?php echo $row['id'];?>"><?php echo $row['nama_kategori'];?></a>
                                 <?php
                                 }
                             ?>

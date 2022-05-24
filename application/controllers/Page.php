@@ -12,7 +12,7 @@ class Page extends CI_Controller {
 		{
 			$data['produk'] = $this->keranjang_model->get_produk_all();
 			$data['kategori'] = $this->keranjang_model->get_kategori_all();
-			$this->load->view('themes/header',$data);
+			$this->load->view('themes/header');
 			$this->load->view('themes/sidebar',$data);
 			$this->load->view('shopping/list_produk',$data);
 			$this->load->view('themes/footer');
