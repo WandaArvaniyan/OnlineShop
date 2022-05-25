@@ -34,7 +34,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="http://localhost/mif2020/OnlineShop/">
+                            <a class="nav-link" href="<?php echo base_url()?>page/index/">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
