@@ -10,7 +10,7 @@ Happy Shopping Maebabies ❤</p> <br>
 <h5>Sosial Media</h5>
 <p> 
     <a color="black" href="https://www.instagram.com/maezula/"> <i class="fa-brands fa-instagram"></i><color="black"> Instagram </a><br>
-    <a href="https://www.tiktok.com/@maezula.co?lang=id-ID"> <i class="fa-brands fa-instagram"></i> Tiktok </a><br>
-    <a href="https://wa.me/6811532776350/"> <i class="fa-brands fa-instagram"></i> WhatsApp </a>
+    <a href="https://www.tiktok.com/@maezula.co?lang=id-ID"> <i class="fa-brands fa-tiktok"></i> Tiktok </a><br>
+    <a href="https://wa.me/6811532776350/"> <i class="fa-brands fa-whatsapp"></i> WhatsApp </a>
 
 
