@@ -1,3 +1,4 @@
+ <!-- <link href="<?php echo base_url()?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
 <h2>Daftar Belanja</h2>
 <form action="<?php echo base_url()?>shopping/ubah_cart" method="post" name="frmShopping" id="frmShopping" class="form-horizontal" enctype="multipart/form-data">
 <?php

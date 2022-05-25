@@ -8,20 +8,20 @@
                 <a href="#"><img class="img-thumbnail" src="<?php echo base_url() . 'assets/images/'.$row['gambar']; ?>"/></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href=""><?php echo $row['nama_produk'];?></a>
+                    <a><?php echo $row['nama_produk'];?></a>
                   </h4>
                   <h5>Rp. <?php echo number_format($row['harga'],0,",",".");?></h5>
                   <p class="card-text"><?php echo $row['deskripsi'];?></p>
                 </div>
                 <div class="card-footer">
-                  <a href="<?php echo base_url();?>shopping/detail_produk/<?php echo $row['id_produk'];?>" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-search"></i> Detail</a> 
+                  <a href="<?php echo base_url();?>shopping/detail_produk/<?php echo $row['id_produk'];?>" class="btn btn-sm btn-default"><i class="fa-solid fa-bookmark"></i> Detail</a> 
                   
                   <input type="hidden" name="id" value="<?php echo $row['id_produk']; ?>" />
                   <input type="hidden" name="nama" value="<?php echo $row['nama_produk']; ?>" />
                   <input type="hidden" name="harga" value="<?php echo $row['harga']; ?>" />
                   <input type="hidden" name="gambar" value="<?php echo $row['gambar']; ?>" />
                   <input type="hidden" name="qty" value="1" />
-                  <button type="submit" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-shopping-cart"></i> Beli</button>
+                  <button type="submit" class="btn btn-sm btn-success"><i class="fa-solid fa-cart-plus"></i> Beli</button>
                 </div>
                 </form>
               </div>
