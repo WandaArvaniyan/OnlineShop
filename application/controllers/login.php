@@ -24,5 +24,5 @@ class Login extends CI_Controller {
             $this->load->view('shopping/login');
         }
     }
-}
+} 
 ?>
