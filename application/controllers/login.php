@@ -11,7 +11,7 @@ class Login extends CI_Controller {
     public function cek_log(){
         $username = $this->input->post('txt_user');
         $password = $this->input->post('txt_pass');
-        $cek = $this->Mahasiswa_model->login($username,$password,'tbl_user')->result();
+        $cek = $this->login_model->login($username,$password,'tbl_user')->result();
         if($cek != FALSE){
             foreach ($cek as $row){
                 $user = $row->username;
