@@ -24,5 +24,20 @@ class Login extends CI_Controller {
             $this->load->view('shopping/login');
         }
     }
+    public function input(){
+        $email = $this->input->post('email');
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $role_id = $this->input->post('role_id');
+
+        $data = array(
+            'email' => $email,
+            'username' => $username,
+            'password' => $password,
+            '2' => $role_id,
+        );
+        $this->login_model->input_data($data, 'tbl_user');
+        redirect('Page');
+    }
 } 
 ?>
