@@ -1,46 +1,7 @@
-<div class="container-fluid">
-    <br>
-    <a class="nav-link" href="<?php echo base_url()?>crud/tambah_produk/">
-      <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fa-solid fa-plus"></i> Tambah Produk</button>
-    </a>
-<table class="table table-bordered">
-    <tr>
-        <th>NO</th>
-        <th>NAMA PRODUK</th>
-        <th>DESKRIPSI</th>
-        <th>DESKRIPSI LENGKAP</th>
-        <th>HARGA</th>
-        <th>STOK</th>
-        <th>GAMBAR</th>
-        <th>KATEGORI</th>
-        <th colspan="3">AKSI</th>
-    </tr>
-    <?php
-    $no=1;
-    foreach($produk as $row) : ?>
-    <tr>
-        <td><?php echo $no++ ?></td>
-        <td><?php echo $row->nama_produk ?></td>
-        <td><?php echo $row->deskripsi?></td>
-        <td><?php echo $row->deskripsi_lengkap?></td>
-        <td><?php echo $row->harga?></td>
-        <td><?php echo $row->stok?></td>
-        <td><?php echo $row->kategori?></td>
-        <td><?php echo $row->gambar?></td>
-
-        <!-- <td><div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div></td> -->
-        <td><?php echo anchor('admin/tbl_produk/edit/'.$row->id_produk,'<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>')?></td>
-        <td><?php echo anchor('admin/tbl_produk/hapus/'.$row->id_produk,'<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>')?></td>
-    </tr>
-    
-    <?php endforeach; ?>
-</table>
-</div>
-<!-- Modal -->
 <div class="modal fade" id="tambah_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <!-- <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header"> -->
         <h5 class="modal-title" id="exampleModalCenterTitle">Form Input Produk</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -49,8 +10,8 @@
       <div class="modal-body">
         <form action="<?php echo base_url(). 'admin/tbl_produk/tambah_aksi';?>" method="post" enctype="multipart/form-data">
             <div class="form=group">
-                <label>Nama Barang</label>
-                <input type="text" name="nama_brg" class="form-control">
+                <label>Nama Produk</label>
+                <input type="text" name="nama_produk" class="form-control">
 
             </div>
             <div class="form=group">
@@ -92,7 +53,7 @@
             
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <a class="nav-link" href="<?php echo base_url()?>admin/tbl_produk/"><button type="button" class="btn btn-danger" data-dismiss="modal">Close</button></a>
         <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </form>

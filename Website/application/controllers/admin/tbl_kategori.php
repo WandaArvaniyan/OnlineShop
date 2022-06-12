@@ -3,11 +3,12 @@
 class tbl_kategori extends CI_Controller{
     public function __construct(){
         parent::__construct();
-        // $this->load->library('cart');
+        $this->load->library('cart');
 		$this->load->model('model_kategori');
     }
     public function index(){
         $data['kategori'] = $this->model_kategori->tampil_data()->result();
+        $this->load->view('themes/header');
         $this->load->view('admin/sidebar');
         $this->load->view('admin/tbl_kategori', $data);
         $this->load->view('admin/footer');
@@ -17,8 +18,8 @@ class tbl_kategori extends CI_Controller{
     $data = array(
         'nama_kategori'      =>$kategori
     );
-$this->model_kategori->tambah_kategori($data,'tbl_kategori');
-redirect('admin/tbl_kategori/index');
+    $this->model_kategori->tambah_kategori($data,'tbl_kategori');
+    redirect('admin/tbl_kategori/index');
     }
 
     public function edit($id){

@@ -1,7 +1,7 @@
 <?php
-class model_produk extends CI_Model{
+class model_pelanggan extends CI_Model{
     public function tampil_data(){
-        return $this->db->get('tbl_produk');
+        return $this->db->get('tbl_pelanggan');
     }
     public function tambah_produk ($data, $table){
         $this->db->insert($table,$data);
@@ -22,9 +22,9 @@ class model_produk extends CI_Model{
 
     }
     public function find($id){
-         $result =$this->db->where('id_produk',$id)
+         $result =$this->db->where('id',$id)
                             ->limit(1)
-                            ->get('tbl_produk');
+                            ->get('tbl_pelanggan');
         if($result->num_rows() > 0){
             return $result->row();
      }else{

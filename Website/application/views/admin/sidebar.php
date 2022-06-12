@@ -56,15 +56,15 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-shirt"></i></div>
                                 Data Produk
                             </a>
-                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_produk/">
+                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_kategori/">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-shirt"></i></div>
                                 Data Kategori
                             </a>
-                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_produk/">
+                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_order/">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-shirt"></i></div>
                                 Data Order
                             </a>
-                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_produk/">
+                            <a class="nav-link" href="<?php echo base_url()?>admin/tbl_pelanggan/">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-shirt"></i></div>
                                 Data Pelanggan
                             </a>
