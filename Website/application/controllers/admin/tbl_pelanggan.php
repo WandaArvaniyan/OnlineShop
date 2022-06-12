@@ -7,7 +7,7 @@ class tbl_pelanggan extends CI_Controller{
 		$this->load->model('model_pelanggan');
     }
     public function index(){
-        $data['pelanggan'] = $this->model_produk->tampil_data()->result();
+        $data['pelanggan'] = $this->model_pelanggan->tampil_data()->result();
         $this->load->view('themes/header');
         $this->load->view('admin/sidebar');
         $this->load->view('admin/tbl_pelanggan', $data);
@@ -31,7 +31,7 @@ class tbl_pelanggan extends CI_Controller{
 
     public function edit($id){
         $where = array('id'=>$id);
-        $data['pelanggan']=$this->model_produk->edit_data($where,'tbl_pelanggan')->result();
+        $data['pelanggan']=$this->model_pelanggan->edit_data($where,'tbl_pelanggan')->result();
         $this->load->view('themes/header');
         $this->load->view('themes/sidebar');
         $this->load->view('crud/edit_pelanggan', $data);
