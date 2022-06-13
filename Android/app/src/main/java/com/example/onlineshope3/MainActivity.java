@@ -1,20 +1,42 @@
-package com.tugas.onlineshop;
+package com.example.onlineshope3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuAdapter;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+import com.laundry.R;
+import com.example.onlineshope3.CuciBasahActivity;
+import com.azhar.laundry.view.dryclean.DryCleanActivity;
+import com.azhar.laundry.view.history.HistoryActivity;
+import com.azhar.laundry.view.ironing.IroningActivity;
+import com.azhar.laundry.view.premiumwash.PremiumWashActivity;
+import com.azhar.laundry.viewmodel.MainViewModel;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import im.delight.android.location.SimpleLocation;
+
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     int REQ_PERMISSION = 100;
     double strCurrentLatitude;
@@ -43,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         setMenu();
         getLocationViewModel();
     }
+
     private void setLocation() {
         simpleLocation = new SimpleLocation(this);
 

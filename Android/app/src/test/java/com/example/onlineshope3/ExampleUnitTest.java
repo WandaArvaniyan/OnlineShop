@@ -1,4 +1,4 @@
-package com.tugas.onlineshop;
+package com.example.onlineshope3;
 
 import org.junit.Test;
 
