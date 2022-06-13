@@ -7,7 +7,7 @@ class tbl_order extends CI_Controller{
 		$this->load->model('model_order');
     }
     public function index(){
-        $data['produk'] = $this->model_produk->tampil_data()->result();
+        $data['order'] = $this->model_order->tampil_data()->result();
         $this->load->view('themes/header');
         $this->load->view('admin/sidebar');
         $this->load->view('admin/tbl_order', $data);
@@ -40,9 +40,9 @@ class tbl_order extends CI_Controller{
         $where = array('id'=>$id);
         $data['order']=$this->model_order->edit_data($where,'tbl_pelanggan', 'tbl_detail_order', 'tbl_order')->result();
         $this->load->view('themes/header');
-        $this->load->view('themes/sidebar');
+        $this->load->view('admin/sidebar');
         $this->load->view('crud/edit_order', $data);
-        $this->load->view('themes/footer');
+        $this->load->view('admin/footer');
     }
     public function update(){
         $id         = $this->input->post('id');

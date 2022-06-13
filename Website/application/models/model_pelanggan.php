@@ -3,7 +3,7 @@ class model_pelanggan extends CI_Model{
     public function tampil_data(){
         return $this->db->get('tbl_pelanggan');
     }
-    public function tambah_produk ($data, $table){
+    public function tambah_pelanggan ($data, $table){
         $this->db->insert($table,$data);
 
     }

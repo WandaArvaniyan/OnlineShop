@@ -20,10 +20,10 @@ class tbl_pelanggan extends CI_Controller{
         $harga =$this->input->post('telp');
         
     $data = array(
-        'nama'       =>$nama_prdk,
-        'email'         =>$deskripsi, 
-        'alamat' =>$deskripsi_lengkap,
-        'telp'             =>$harga
+        'nama'      =>$nama_prdk,
+        'email'     =>$deskripsi, 
+        'alamat'    =>$deskripsi_lengkap,
+        'telp'      =>$harga
     );
     $this->model_pelanggan->tambah_pelanggan($data,'tbl_pelanggan');
     redirect('admin/tbl_pelanggan/index');
@@ -33,9 +33,9 @@ class tbl_pelanggan extends CI_Controller{
         $where = array('id'=>$id);
         $data['pelanggan']=$this->model_pelanggan->edit_data($where,'tbl_pelanggan')->result();
         $this->load->view('themes/header');
-        $this->load->view('themes/sidebar');
+        $this->load->view('admin/sidebar');
         $this->load->view('crud/edit_pelanggan', $data);
-        $this->load->view('themes/footer');
+        $this->load->view('admin/footer');
     }
     public function update(){
         $id         = $this->input->post('id');

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h3><i class= "fas fa-edit"></i>EDIT DATA</h3>
+    <h3><i class= "fas fa-edit"></i>EDIT KATEGORI</h3>
 
     <?php foreach($kategori as $ktg): ?>
         <form method ="post" action="<?php echo base_url() .'admin/tbl_kategori/update' ?>">
