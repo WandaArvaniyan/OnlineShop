@@ -21,7 +21,7 @@ class tbl_order extends CI_Controller{
         $id_produk =$this->input->post('id_produk');
         $qty =$this->input->post('qty');
         $harga =$this->input->post('harga');  
-        $tanggal =$this->input->post('tanggal');           
+        // $tanggal =$this->input->post('tanggal');           
         
     $data = array(
         'nama'      =>$nama,
@@ -48,12 +48,12 @@ class tbl_order extends CI_Controller{
         $id         = $this->input->post('id');
         $nama       =$this->input->post('nama');
         $email      =$this->input->post('email');
-        $alamat =$this->input->post('alamat');
-        $telp =$this->input->post('telp');
-        $id_produk =$this->input->post('id_produk');
-        $qty =$this->input->post('qty');
-        $harga =$this->input->post('harga');  
-        $tanggal =$this->input->post('tanggal'); 
+        $alamat     =$this->input->post('alamat');
+        $telp       =$this->input->post('telp');
+        $id_produk  =$this->input->post('id_produk');
+        $qty        =$this->input->post('qty');
+        $harga      =$this->input->post('harga');  
+        // $tanggal    =$this->input->post('tanggal'); 
     
     $data = array(
         'nama'      =>$nama,
@@ -62,23 +62,23 @@ class tbl_order extends CI_Controller{
         'telp'      =>$telp,
         'id_produk' =>$id_produk,
         'qty'       =>$qty,
-        'harga'     =>$harga,
-        'tanggal'   =>$tanggal
+        'harga'     =>$harga
+        // 'tanggal'   =>$tanggal
         
     );
     $where = array(
-        'id_produk'   =>$id
+        'id'   =>$id
     );
 
-    $this->model_produk->update_data($where,$data,'tbl_produk');
-    redirect('admin/tbl_produk/index');
+    $this->model_order->update_data($where,$data,'tbl_produk','tbl_detail_order');
+    redirect('admin/tbl_order/index');
 
 
     }
     public function hapus($id){
         $where = array('id'=>$id);
-        $this->model_produk->hapus_data($where,'tbl_produk');
-        redirect('admin/tbl_produk/index');
+        $this->model_order->hapus_data($where,'tbl_pelanggan','tbl_detail_order');
+        redirect('admin/tbl_order/index');
     }
 
 }
